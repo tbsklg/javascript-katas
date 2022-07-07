@@ -1,0 +1,17 @@
+{
+  "name": "javascript-katas",
+  "version": "1.0.0",
+  "description": "This project contains my solutions to some JavaScript katas from Codewars",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "mocha": "^10.0.0",
+    "chai": "^4.3.6"
+  }
+}

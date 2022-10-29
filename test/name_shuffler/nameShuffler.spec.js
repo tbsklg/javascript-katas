@@ -9,8 +9,8 @@ const Test = {
 
 const nameShuffler = require('../../src/name_shuffler/nameShuffler')
 
-describe("Tests", () => {
-    it("test", () => {
-        Test.assertEquals(nameShuffler('john McClane'), 'McClane john')
-    })
+describe('Tests', () => {
+  it('test', () => {
+    Test.assertEquals(nameShuffler('john McClane'), 'McClane john')
+  })
 })

@@ -1,14 +1,14 @@
-function digital_root(n) {
-    if (n < 10) return n
+function digitalRoot (n) {
+  if (n < 10) return n
 
-    return digital_root(digits(n).reduce((pre, curr) => pre + curr))
+  return digitalRoot(digits(n).reduce((pre, curr) => pre + curr))
 }
 
-function digits(n) {
-    return ("" + n).split("").map(a => parseInt(a));
+function digits (n) {
+  return ('' + n).split('').map(a => parseInt(a))
 }
 
 module.exports = {
-    digital_root,
-    digits,
+  digital_root: digitalRoot,
+  digits
 }

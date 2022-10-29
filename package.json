@@ -4,14 +4,17 @@
   "description": "This project contains my solutions to some JavaScript katas from Codewars",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --recursive"
+    "test": "mocha --recursive",
+    "standard:fix": "npx standard --fix"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-  },
   "devDependencies": {
+    "chai": "^4.3.6",
     "mocha": "^10.0.0",
-    "chai": "^4.3.6"
+    "standard": "^17.0.0"
+  },
+  "standard": {
+    "globals": ["describe", "it", "beforeEach"]
   }
 }

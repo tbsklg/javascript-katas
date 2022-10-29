@@ -1,5 +1,5 @@
-function uniteUnique(...arr) {
-    return [...new Set(arr.flat())]
+function uniteUnique (...arr) {
+  return [...new Set(arr.flat())]
 }
 
 module.exports = uniteUnique

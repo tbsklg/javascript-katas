@@ -19,6 +19,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Run standard linting
-        run: npm run standard:fix
+        run: npm run standard
       - name: Run tests
         run: npm test

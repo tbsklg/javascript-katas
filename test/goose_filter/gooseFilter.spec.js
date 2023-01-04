@@ -7,7 +7,7 @@ const Test = {
   }
 }
 
-const gooseFilter = require('../../src/gooseFilter/goose_filter')
+const gooseFilter = require('../../src/goose_filter/gooseFilter')
 
 describe("Basic tests",function(){
   it("Mixed list",function(){

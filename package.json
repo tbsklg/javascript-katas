@@ -22,10 +22,5 @@
       "it",
       "beforeEach"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run standard:fix"
-    }
   }
 }

@@ -10,7 +10,7 @@ const Test = {
 
 describe('Tests', () => {
   it('test', () => {
-    var data = [2, 4, 5, 2]
+    const data = [2, 4, 5, 2]
     Test.expect(printArray(data), '2,4,5,2')
   })
 })

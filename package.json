@@ -12,10 +12,20 @@
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.3.6",
+    "husky": "^8.0.3",
     "mocha": "^10.0.0",
     "standard": "^17.0.0"
   },
   "standard": {
-    "globals": ["describe", "it", "beforeEach"]
+    "globals": [
+      "describe",
+      "it",
+      "beforeEach"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run standard:fix"
+    }
   }
 }

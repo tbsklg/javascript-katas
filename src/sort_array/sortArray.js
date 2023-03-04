@@ -1,4 +1,4 @@
-function sortArray(array) {
+function sortArray (array) {
   const oddsAsc = array.filter(n => n % 2 !== 0).sort((a, b) => a - b)
   const evensDesc = array.filter(n => n % 2 === 0).sort((a, b) => b - a)
 

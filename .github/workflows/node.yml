@@ -1,5 +1,5 @@
 ---
-name: Node.js CI
+name: Run tests and linting on Node.js
 
 on:
   push:

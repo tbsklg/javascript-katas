@@ -8,7 +8,7 @@ const shift = size => x => {
   const from = codePoint(x)
   const offset = isUpper(x) ? codePoint('A') : codePoint('a')
 
-  return ((from - offset + size) % alphabetSize) + offset 
+  return ((from - offset + size) % alphabetSize) + offset
 }
 
 const codePoint = x => x.charCodeAt(0)

@@ -5,11 +5,15 @@ const isAlpha = x => /[a-zA-Z]/.test(x)
 const shift = size => x => {
   if (!isAlpha(x)) return x.charCodeAt(0)
 
-  const from = x.charCodeAt(0)
-  const base = isUpper(x) ? 'A'.charCodeAt(0) : 'a'.charCodeAt(0)
+  const from = codePoint(x)
+  const offset = isUpper(x) ? codePoint('A') : codePoint('a')
 
-  return ((from - base + size) % 26) + base
+  return ((from - offset + size) % alphabetSize) + offset 
 }
+
+const codePoint = x => x.charCodeAt(0)
+
+const alphabetSize = 26
 
 const shift13 = shift(13)
 

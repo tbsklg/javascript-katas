@@ -10,9 +10,9 @@ const containsOnlyWhitespaces = str => /^\s*$/.test(str)
 
 const greaterThan140 = str => [...str].filter(x => x !== ' ').length > 139
 
-const capitalize = str => head(str).toUpperCase() + tail(str)
+const capitalize = str => safeHead(str).toUpperCase() + tail(str)
 
-const head = str => str.at(0) || ''
+const safeHead = (str, fallback = '') => str.at(0) || fallback
 
 const tail = str => str.slice(1)
 

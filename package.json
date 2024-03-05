@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "This project contains my solutions to some JavaScript katas from Codewars",
   "scripts": {
-    "prepare": "node . husky/install.mjs",
+    "prepare": "husky || true",
     "test": "mocha --recursive",
     "test:watch": "mocha --watch --recursive",
     "standard": "standard",

@@ -10,18 +10,24 @@ Object.assign(String.prototype, {
   }
 })
 
-const generateHashtag = str => validate(str) && hashify(str)
+const pipe =
+  (fn, ...fns) =>
+    (...params) =>
+      fns.reduce((acc, curr) => curr(acc), fn(...params))
 
-const validate = str => !isEmpty(str) && !greaterThan140(str)
+const containsOnlyWhitespaces = (str) => /^\s*$/.test(str)
 
-const hashify = str => '#' + str.split(' ').map(capitalize).join('')
+const parseNotIsEmpty = (str) =>
+  str.length !== 0 && !containsOnlyWhitespaces(str) && str
 
-const isEmpty = str => str.length === 0 || containsOnlyWhitespaces(str)
+const parseSmallerThan140 = (str) => str && [...str].filter((x) => x !== ' ').length < 140 && str
 
-const containsOnlyWhitespaces = str => /^\s*$/.test(str)
+const capitalize = (str) => str.safeHead().toUpperCase() + str.tail()
 
-const greaterThan140 = str => [...str].filter(x => x !== ' ').length > 139
+const hashify = (str) => str && '#' + str.split(' ').map(capitalize).join('')
 
-const capitalize = str => str.safeHead().toUpperCase() + str.tail()
+const parse = pipe(parseNotIsEmpty, parseSmallerThan140)
+
+const generateHashtag = pipe(parse, hashify)
 
 module.exports = generateHashtag

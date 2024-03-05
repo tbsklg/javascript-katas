@@ -8,8 +8,7 @@ Object.assign(String.prototype, {
   tail () {
     return this.slice(1)
   }
-}
-)
+})
 
 const generateHashtag = str => validate(str) && hashify(str)
 

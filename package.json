@@ -2,7 +2,6 @@
   "name": "javascript-katas",
   "version": "1.0.0",
   "description": "This project contains my solutions to some JavaScript katas from Codewars",
-  "main": "index.js",
   "scripts": {
     "prepare": "node . husky/install.mjs",
     "test": "mocha --recursive",

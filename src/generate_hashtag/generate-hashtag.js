@@ -15,16 +15,20 @@ const pipe =
     (...params) =>
       fns.reduce((acc, curr) => curr(acc), fn(...params))
 
+const space = ' '
+
+const notIsSpace = (str) => str !== space
+
 const containsOnlyWhitespaces = (str) => /^\s*$/.test(str)
 
 const parseNotIsEmpty = (str) =>
   str.length !== 0 && !containsOnlyWhitespaces(str) && str
 
-const parseSmallerThan140 = (str) => str && [...str].filter((x) => x !== ' ').length < 140 && str
+const parseSmallerThan140 = (str) => str && [...str].filter(notIsSpace).length < 140 && str
 
 const capitalize = (str) => str.safeHead().toUpperCase() + str.tail()
 
-const hashify = (str) => str && '#' + str.split(' ').map(capitalize).join('')
+const hashify = (str) => str && '#' + str.split(space).map(capitalize).join('')
 
 const parse = pipe(parseNotIsEmpty, parseSmallerThan140)
 

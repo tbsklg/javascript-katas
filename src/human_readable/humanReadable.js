@@ -1,7 +1,7 @@
-function humanReadable (seconds) {
-  const h = Math.floor(seconds / 3600)
-  const m = Math.floor((seconds - (h * 3600)) / 60)
-  const s = Math.floor(seconds - h * 3600 - m * 60)
+const humanReadable = seconds => {
+  const h = parseInt(seconds / 3600)
+  const m = parseInt(seconds / 60) % 60
+  const s = seconds % 60
 
   return [format(h), format(m), format(s)].join(':')
 }

@@ -11,6 +11,6 @@ describe('Simple Tests', function () {
     Test.assertEquals(firstNonRepeatingLetter('a'), 'a')
     Test.assertEquals(firstNonRepeatingLetter('stress'), 't')
     Test.assertEquals(firstNonRepeatingLetter('moonmen'), 'e')
-    Test.assertEquals(firstNonRepeatingLetter('Go hang a salami, I\'m a lasagna hog!'), 'G')
+    Test.assertEquals(firstNonRepeatingLetter('Go hang a salami, I\'m a lasagna hog!'), ',')
   })
 })

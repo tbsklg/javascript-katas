@@ -1,4 +1,4 @@
-function alphabetPosition (text) {
+const alphabetPosition = text => {
   const alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
   return [...text]

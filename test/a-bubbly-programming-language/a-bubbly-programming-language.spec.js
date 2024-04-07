@@ -9,7 +9,7 @@ const {
   div,
   mul,
   push
-} = require('../../src/a-bubbly-programming-language/a-bubbly-programming-language')
+} = require('../../src/a_bubbly_programming_language/a-bubbly-programming-language')
 
 describe('Bubbly', () => {
   it('description examples', () => {

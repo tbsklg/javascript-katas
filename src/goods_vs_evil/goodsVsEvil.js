@@ -1,8 +1,6 @@
 function goodVsEvil (good, evil) {
   const goodsScore = sum(zipWith(multiply)(numbers(good), goodsWorth))
   const evilsScore = sum(zipWith(multiply)(numbers(evil), evilsWorth))
-  console.error(goodsScore)
-  console.error(evilsScore)
 
   if (goodsScore > evilsScore) return goodsWin
   if (evilsScore > goodsScore) return evilsWin

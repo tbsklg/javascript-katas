@@ -6,7 +6,7 @@ const Test = {
   }
 }
 
-const decode = require('../../src/digital_cypher/digitalCypher')
+const decode = require('../../src/digital_cypher/decode')
 
 describe('Encoding..', function () {
   it('Basic Tests', function () {

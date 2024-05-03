@@ -1,5 +1,5 @@
 const Test = {
-  assertEquals: (act, exp) => require('chai').expect(act).to.equal(exp)
+  assertEquals: (act, exp) => require('chai').expect(act).to.equal(exp),
 }
 
 const tripledouble = require('../../src/triple_trouble/tripleTrouble')

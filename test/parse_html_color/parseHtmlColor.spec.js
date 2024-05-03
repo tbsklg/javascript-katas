@@ -2,7 +2,8 @@ const { expect } = require('chai')
 
 const parseHTMLColor = require('../../src/parse_html_color/parseHtmlColor')
 
-const assertColorEquals = (current, expected) => expect(current).to.eql(expected)
+const assertColorEquals = (current, expected) =>
+  expect(current).to.eql(expected)
 
 describe('Example tests', () => {
   it('should parse example colors', () => {

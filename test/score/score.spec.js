@@ -2,9 +2,9 @@ const chai = require('chai')
 const expect = chai.expect
 
 const Test = {
-  expect (actual, expected) {
+  expect(actual, expected) {
     expect(actual).to.equal(expected)
-  }
+  },
 }
 
 const score = require('../../src/score/score')

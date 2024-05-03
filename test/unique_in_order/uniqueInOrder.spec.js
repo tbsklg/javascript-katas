@@ -6,6 +6,13 @@ const uniqueInOrder = require('../../src/unique_in_order/uniqueInOrder')
 
 describe('Tests', () => {
   it('test', () => {
-    assert.deepEqual(uniqueInOrder('AAAABBBCCDAABBB'), ['A', 'B', 'C', 'D', 'A', 'B'])
+    assert.deepEqual(uniqueInOrder('AAAABBBCCDAABBB'), [
+      'A',
+      'B',
+      'C',
+      'D',
+      'A',
+      'B',
+    ])
   })
 })

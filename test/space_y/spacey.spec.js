@@ -7,17 +7,21 @@ const spacey = require('../../src/spacey/space_y')
 
 describe('Fixed Tests', () => {
   it('["kevin","has","no","space"]', () => {
-    assert.deepEqual(spacey(['kevin', 'has', 'no', 'space']), ['kevin',
+    assert.deepEqual(spacey(['kevin', 'has', 'no', 'space']), [
+      'kevin',
       'kevinhas',
       'kevinhasno',
-      'kevinhasnospace'])
+      'kevinhasnospace',
+    ])
   })
 
   it('["this","cheese","has","no","holes"]', () => {
-    assert.deepEqual(spacey(['this', 'cheese', 'has', 'no', 'holes']), ['this',
+    assert.deepEqual(spacey(['this', 'cheese', 'has', 'no', 'holes']), [
+      'this',
       'thischeese',
       'thischeesehas',
       'thischeesehasno',
-      'thischeesehasnoholes'])
+      'thischeesehasnoholes',
+    ])
   })
 })

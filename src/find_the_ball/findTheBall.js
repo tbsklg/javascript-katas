@@ -1,4 +1,4 @@
-function findTheBall (start, [x, ...xs]) {
+function findTheBall(start, [x, ...xs]) {
   if (x === undefined) return start
 
   const [from, to] = x

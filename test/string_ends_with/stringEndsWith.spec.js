@@ -3,9 +3,9 @@ const expect = chai.expect
 const solution = require('../../src/string_ends_with/stringEndsWith')
 
 const Test = {
-  assertEquals (actual, expected) {
+  assertEquals(actual, expected) {
     expect(actual).to.equal(expected)
-  }
+  },
 }
 
 describe('Tests', () => {

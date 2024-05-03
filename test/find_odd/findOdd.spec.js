@@ -3,7 +3,7 @@ const assert = require('chai').assert
 const findOdd = require('../../src/find_odd/findOdd')
 
 describe('Example tests', function () {
-  function doTest (a, n) {
+  function doTest(a, n) {
     assert.strictEqual(findOdd(a), n, `Incorrect answer for input=[${a}]`)
   }
 

@@ -3,8 +3,9 @@ const uniqueInOrder = function (iterable) {
 
   const [head, ...tail] = iterable
 
-  return [head, ...uniqueInOrder(tail)]
-    .filter((item, index, array) => item !== array[index - 1])
+  return [head, ...uniqueInOrder(tail)].filter(
+    (item, index, array) => item !== array[index - 1],
+  )
 }
 
 module.exports = uniqueInOrder

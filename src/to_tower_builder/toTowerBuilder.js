@@ -1,4 +1,4 @@
-function towerBuilder (nFloors) {
+function towerBuilder(nFloors) {
   const build = (i) => {
     if (i > nFloors) return []
 

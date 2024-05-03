@@ -1,4 +1,4 @@
-function persistence (num) {
+function persistence(num) {
   const digits = digitsOf(num)
   if (digits.length < 2) return 0
 

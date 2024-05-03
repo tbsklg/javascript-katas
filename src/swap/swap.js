@@ -1,12 +1,14 @@
-function swap (s, n) {
+function swap(s, n) {
   if (s === '') return ''
 
   const swapCase = ([x, ...xs], [b, ...bs]) => {
     if (x === undefined) return ''
     if (x === ' ') return [' ', ...swapCase(xs, [b, ...bs])]
 
-    if (b === 1 && isUpperCase(x)) return [x.toLowerCase(), ...swapCase(xs, [...bs, b])]
-    if (b === 1 && isLowerCase(x)) return [x.toUpperCase(), ...swapCase(xs, [...bs, b])]
+    if (b === 1 && isUpperCase(x))
+      return [x.toLowerCase(), ...swapCase(xs, [...bs, b])]
+    if (b === 1 && isLowerCase(x))
+      return [x.toUpperCase(), ...swapCase(xs, [...bs, b])]
     if (b === 0 && isAlpha(x)) return [x, ...swapCase(xs, [...bs, b])]
     return [x, ...swapCase(xs, [b, ...bs])]
   }

@@ -1,4 +1,4 @@
-function parse (raw) {
+function parse(raw) {
   const performParsing = ([x, ...xs], currentResult = 0) => {
     const increment = (i) => i + 1
     const decrement = (i) => i - 1

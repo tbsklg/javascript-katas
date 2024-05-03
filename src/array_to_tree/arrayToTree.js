@@ -1,11 +1,11 @@
-const arrayToTree = array => {
+const arrayToTree = (array) => {
   const createTree = (index = 0) => {
     if (index > array.length - 1) return undefined
 
     return {
       value: array[index],
       left: createTree(2 * index + 1),
-      right: createTree(2 * index + 2)
+      right: createTree(2 * index + 2),
     }
   }
 

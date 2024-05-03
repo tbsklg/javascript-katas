@@ -1,7 +1,7 @@
 const chai = require('chai')
 const assert = chai.assert
 
-function testing (actual, expected) {
+function testing(actual, expected) {
   assert.strictEqual(actual, expected)
 }
 

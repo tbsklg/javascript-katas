@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "This project contains my solutions to some JavaScript katas from Codewars",
   "scripts": {
-    "prepare": "husky || true",
+    "prepare": "husky",
     "test": "mocha --recursive",
     "test:watch": "mocha --watch --recursive",
-    "standard": "standard",
-    "standard:fix": "standard --fix"
+    "lint-staged": "lint-staged",
+    "lint": "eslint ."
   },
   "author": "",
   "license": "ISC",
@@ -16,15 +16,14 @@
     "chai": "^4.3.6",
     "eslint": "^8.57.0",
     "globals": "^15.0.0",
-    "husky": "^8.0.3",
+    "husky": "^9.0.11",
     "mocha": "^10.0.0",
-    "standard": "^17.0.0"
+    "prettier": "3.2.5",
+    "lint-staged": "^15.2.2"
   },
-  "standard": {
-    "globals": [
-      "describe",
-      "it",
-      "beforeEach"
+  "lint-staged": {
+    "*.js": [
+      "prettier --write"
     ]
   }
 }

@@ -1,4 +1,4 @@
-function validParentheses (parens) {
+function validParentheses(parens) {
   const isValid = (current, n = 0) => {
     if (current.length === 0) return n === 0
     if (n < 0) return false

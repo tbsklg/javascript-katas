@@ -1,7 +1,7 @@
 const { assert } = require('chai')
 
 const Test = {
-  assertEquals: assert.strictEqual
+  assertEquals: assert.strictEqual,
 }
 
 const minimumNumber = require('../../src/minimum_number/minimumNumber')

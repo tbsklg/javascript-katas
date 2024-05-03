@@ -2,7 +2,7 @@ describe('tests', function () {
   const { strictEqual } = require('chai').assert
   const humanReadable = require('../../src/human_readable/humanReadable')
 
-  function doTest (seconds, expected) {
+  function doTest(seconds, expected) {
     const actual = humanReadable(seconds)
     strictEqual(actual, expected, `for ${seconds} seconds\n`)
   }

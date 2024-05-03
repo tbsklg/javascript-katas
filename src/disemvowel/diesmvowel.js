@@ -1,5 +1,8 @@
-function disemvowel (str) {
-  return str.split('').filter(c => !vowels.includes(c)).join('')
+function disemvowel(str) {
+  return str
+    .split('')
+    .filter((c) => !vowels.includes(c))
+    .join('')
 }
 
 const vowels = 'aeiouAEIOU'

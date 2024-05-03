@@ -1,4 +1,4 @@
-function revrot (str, sz) {
+function revrot(str, sz) {
   if (sz === 0) return ''
 
   const chunksOf = (size, xs) => {
@@ -10,15 +10,12 @@ function revrot (str, sz) {
     return [...xs, x]
   }
 
-  const sumOfCubes = (xs) => xs
-    .reduce((acc, x) => acc + Math.pow(x, 3), 0)
+  const sumOfCubes = (xs) => xs.reduce((acc, x) => acc + Math.pow(x, 3), 0)
 
   const reverseOrRotate = ([...digits]) => {
     const isEven = sumOfCubes(digits) % 2 === 0
 
-    const chunk = isEven
-      ? digits.reverse()
-      : shiftLeft(digits)
+    const chunk = isEven ? digits.reverse() : shiftLeft(digits)
 
     return chunk.join('')
   }

@@ -1,4 +1,4 @@
-function uefaEuro2016 ([homeTeam, awayTeam], [homeScores, awayScores]) {
+function uefaEuro2016([homeTeam, awayTeam], [homeScores, awayScores]) {
   const match = `At match ${homeTeam} - ${awayTeam}`
   const isDraw = homeScores === awayScores
   if (isDraw) return `${match}, teams played draw.`

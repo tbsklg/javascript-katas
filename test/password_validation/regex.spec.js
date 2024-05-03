@@ -2,7 +2,7 @@ const { strictEqual } = require('chai').assert
 
 const { REGEXP } = require('../../src/password_validation/regex')
 
-function doTest (string, expected) {
+function doTest(string, expected) {
   const actual = REGEXP.test(string)
   const log = `"${string}" is${expected ? '' : ' not'} a valid password\n`
   strictEqual(actual, expected, log)

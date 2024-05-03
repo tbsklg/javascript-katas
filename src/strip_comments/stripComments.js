@@ -6,8 +6,8 @@ const solution = (text, markers) => {
       lines(trimmed).map((l) =>
         takeWhile((c) => !markers.includes(c), l)
           .join('')
-          .trimEnd()
-      )
+          .trimEnd(),
+      ),
     )
   }
 

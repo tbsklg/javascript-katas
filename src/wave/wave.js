@@ -1,4 +1,4 @@
-function wave (str) {
+function wave(str) {
   const createWave = (str, [i, ...is]) => {
     if (i === undefined) return []
 
@@ -14,7 +14,10 @@ function wave (str) {
     return [newStr, ...createWave(str, is)]
   }
 
-  return createWave(str, Array.from({ length: str.length }, (_, i) => i))
+  return createWave(
+    str,
+    Array.from({ length: str.length }, (_, i) => i),
+  )
 }
 
 module.exports = wave

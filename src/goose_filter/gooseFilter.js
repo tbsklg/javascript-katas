@@ -1,7 +1,13 @@
-function gooseFilter (birds) {
-  const geese = ['African', 'Roman Tufted', 'Toulouse', 'Pilgrim', 'Steinbacher']
+function gooseFilter(birds) {
+  const geese = [
+    'African',
+    'Roman Tufted',
+    'Toulouse',
+    'Pilgrim',
+    'Steinbacher',
+  ]
 
-  return birds.filter(bird => !geese.find(g => g === bird))
+  return birds.filter((bird) => !geese.find((g) => g === bird))
 }
 
 module.exports = gooseFilter

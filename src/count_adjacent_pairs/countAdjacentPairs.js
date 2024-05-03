@@ -1,8 +1,8 @@
-function countAdjacentPairs (searchString) {
+function countAdjacentPairs(searchString) {
   if (searchString === '') return 0
   const words = searchString.toLowerCase().split(' ')
 
-  function countByAdjacent (xs) {
+  function countByAdjacent(xs) {
     if (xs.length === 1 || xs.length === 0) return 0
     const [x, y, ...rest] = xs
 
@@ -10,7 +10,7 @@ function countAdjacentPairs (searchString) {
     return countByAdjacent([y, ...rest])
   }
 
-  function dropOccurences (xs, x) {
+  function dropOccurences(xs, x) {
     if (xs.length === 0) return []
     const [head, ...tail] = xs
 

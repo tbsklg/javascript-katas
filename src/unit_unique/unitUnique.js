@@ -1,4 +1,4 @@
-function uniteUnique (...arr) {
+function uniteUnique(...arr) {
   return [...new Set(arr.flat())]
 }
 

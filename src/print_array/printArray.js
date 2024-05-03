@@ -1,4 +1,4 @@
-function printArray (array) {
+function printArray(array) {
   return array.join(',')
 }
 

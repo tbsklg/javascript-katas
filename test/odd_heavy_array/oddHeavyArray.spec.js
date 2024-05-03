@@ -2,7 +2,7 @@ const chai = require('chai')
 const assert = chai.assert
 
 const Test = {
-  assertDeepEquals: assert.deepEqual
+  assertDeepEquals: assert.deepEqual,
 }
 
 const isOddHeavy = require('../../src/odd_heavy_array/oddHeavy.js')

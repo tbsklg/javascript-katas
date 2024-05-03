@@ -1,4 +1,4 @@
-function sumStrings (a, b) {
+function sumStrings(a, b) {
   if (a === '') {
     return b
   }
@@ -13,7 +13,7 @@ function sumStrings (a, b) {
   return res.slice(res[0] === 0 ? 1 : 0).join('')
 }
 
-function addRecursive (x, y, carry) {
+function addRecursive(x, y, carry) {
   if (x.length === 0 && y.length === 0 && carry === 0) {
     return []
   }

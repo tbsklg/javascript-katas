@@ -1,4 +1,4 @@
-function rainAmount (mm) {
+function rainAmount(mm) {
   if (mm >= 40) {
     return 'Your plant has had more than enough water for today!'
   }

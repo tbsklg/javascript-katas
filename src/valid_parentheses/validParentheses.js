@@ -1,4 +1,4 @@
-function validParentheses (parenStr) {
+function validParentheses(parenStr) {
   if (parenStr === '') return true
   if (parenStr.at(0) !== '(') return false
 
@@ -9,7 +9,8 @@ function validParentheses (parenStr) {
 
     if (x === '(') return validate(xs, [')', ...stack])
 
-    if (x === ')' && (stack.at(0) || '') === ')') return validate(xs, stack.slice(1))
+    if (x === ')' && (stack.at(0) || '') === ')')
+      return validate(xs, stack.slice(1))
 
     return false
   }

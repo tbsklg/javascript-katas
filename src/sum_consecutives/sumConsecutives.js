@@ -1,4 +1,4 @@
-function sumConsecutives (s) {
+function sumConsecutives() {
   // your code
 }
 

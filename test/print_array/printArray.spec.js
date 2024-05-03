@@ -5,7 +5,7 @@ const printArray = require('../../src/print_array/printArray')
 const Test = {
   expect: (actual, expected) => {
     expect(actual).to.equal(expected)
-  }
+  },
 }
 
 describe('Tests', () => {

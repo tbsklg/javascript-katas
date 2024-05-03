@@ -1,11 +1,11 @@
 const chai = require('chai')
 const assert = chai.assert
 
-function runTest (expected, input) {
+function runTest(expected, input) {
   assert.strictEqual(
     validParentheses(input),
     expected,
-    `Test failed for input: "${input}"`
+    `Test failed for input: "${input}"`,
   )
 }
 

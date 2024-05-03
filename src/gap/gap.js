@@ -1,4 +1,4 @@
-function gap (g, m, n) {
+function gap(g, m, n) {
   const findGap = (primes, current) => {
     const next = primes.next().value
 
@@ -13,7 +13,7 @@ function gap (g, m, n) {
   return findGap(ps, ps.next().value)
 }
 
-const isPrime = n => {
+const isPrime = (n) => {
   for (let i = 2; i <= Math.sqrt(n); i++) {
     if (n % i === 0) return false
   }
@@ -21,7 +21,7 @@ const isPrime = n => {
   return true
 }
 
-function * primes (m, n) {
+function* primes(m, n) {
   for (let i = m; i < n; i++) {
     if (isPrime(i)) yield i
   }

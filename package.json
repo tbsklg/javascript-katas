@@ -6,7 +6,8 @@
     "prepare": "husky",
     "test": "mocha --recursive",
     "test:watch": "mocha --watch --recursive",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "lint": "eslint ."
   },
   "author": "",
   "license": "ISC",

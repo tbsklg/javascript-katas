@@ -1,4 +1,4 @@
-function palindrome (num) {
+function palindrome(num) {
   if (typeof num === 'string' || num % 1 !== 0 || num < 0) return 'Not valid'
 
   const isPalindrome = (xs) => xs === xs.split('').reverse().join('')
@@ -7,7 +7,11 @@ function palindrome (num) {
 
   const containsPalindrome = (xs) => {
     if (xs.length === 1) return false
-    return isPalindrome(xs) || containsPalindrome(init(xs)) || containsPalindrome(tail(xs))
+    return (
+      isPalindrome(xs) ||
+      containsPalindrome(init(xs)) ||
+      containsPalindrome(tail(xs))
+    )
   }
 
   const numAsString = num.toString()

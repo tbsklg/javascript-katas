@@ -1,4 +1,4 @@
-function isPangram (string) {
+function isPangram(string) {
   const alphabet = 'abcdefghijklmnopqrstuvwxyz'
   return alphabet
     .split('')

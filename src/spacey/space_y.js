@@ -1,4 +1,5 @@
-const spacey = (xs) => tail(xs).reduce((acc, curr) => [...acc, last(acc) + curr], [head(xs)])
+const spacey = (xs) =>
+  tail(xs).reduce((acc, curr) => [...acc, last(acc) + curr], [head(xs)])
 
 const tail = (xs) => xs.slice(1)
 const last = (xs) => xs.at(-1)

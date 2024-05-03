@@ -1,1 +1,1 @@
-npm run standard:fix
+npm test

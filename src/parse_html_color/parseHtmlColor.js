@@ -1,4 +1,4 @@
-function parseHTMLColor (color) {
+function parseHTMLColor(color) {
   const colorToParse = PRESET_COLORS[color.toLowerCase()] || color
   const tail = colorToParse.slice(1)
 
@@ -7,20 +7,24 @@ function parseHTMLColor (color) {
   const chunk = (arr, chunkSize) => {
     if (arr.length === 0) return []
 
-    return [arr.substring(0, chunkSize), ...chunk(arr.substring(chunkSize), chunkSize)]
+    return [
+      arr.substring(0, chunkSize),
+      ...chunk(arr.substring(chunkSize), chunkSize),
+    ]
   }
 
-  const flatten = (str) => str.split('').map(c => c + c).join('')
+  const flatten = (str) =>
+    str
+      .split('')
+      .map((c) => c + c)
+      .join('')
 
-  const [r, g, b] =
-    tail.length === 6
-      ? chunk(tail, 2)
-      : chunk(flatten(tail), 2)
+  const [r, g, b] = tail.length === 6 ? chunk(tail, 2) : chunk(flatten(tail), 2)
 
   return {
     r: toRgb(r),
     g: toRgb(g),
-    b: toRgb(b)
+    b: toRgb(b),
   }
 }
 
@@ -172,7 +176,7 @@ const PRESET_COLORS = {
   white: '#ffffff',
   whitesmoke: '#f5f5f5',
   yellow: '#ffff00',
-  yellowgreen: '#9acd32'
+  yellowgreen: '#9acd32',
 }
 
 module.exports = parseHTMLColor

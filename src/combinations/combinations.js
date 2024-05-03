@@ -1,7 +1,7 @@
-function solve (arrays) {
+function solve(arrays) {
   return arrays
-    .map(arr => new Set(arr))
-    .map(arr => arr.size)
+    .map((arr) => new Set(arr))
+    .map((arr) => arr.size)
     .reduce((acc, curr) => acc * curr, 1)
 }
 

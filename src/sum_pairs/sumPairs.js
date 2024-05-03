@@ -1,4 +1,4 @@
-function sumPairs (ints, s) {
+function sumPairs(ints, s) {
   const visited = new Set([ints[0]])
 
   for (let i = 1; i < ints.length; i++) {

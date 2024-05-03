@@ -1,10 +1,13 @@
 const chai = require('chai')
 
 const Test = {
-  assertEquals: (current, expected) => chai.assert.equal(current, expected)
+  assertEquals: (current, expected) => chai.assert.equal(current, expected),
 }
 
-const { encrypt, decrypt } = require('../../src/simple_encryption/simpleEncryption')
+const {
+  encrypt,
+  decrypt,
+} = require('../../src/simple_encryption/simpleEncryption')
 
 describe('Solution', function () {
   it('EncryptExampleTests', function () {
@@ -14,7 +17,10 @@ describe('Solution', function () {
     Test.assertEquals(encrypt('This is a test!', 3), ' Tah itse sits!')
     Test.assertEquals(encrypt('This is a test!', 4), 'This is a test!')
     Test.assertEquals(encrypt('This is a test!', -1), 'This is a test!')
-    Test.assertEquals(encrypt('This kata is very interesting!', 1), 'hskt svr neetn!Ti aai eyitrsig')
+    Test.assertEquals(
+      encrypt('This kata is very interesting!', 1),
+      'hskt svr neetn!Ti aai eyitrsig',
+    )
   })
 })
 
@@ -26,7 +32,10 @@ describe('Solution', function () {
     Test.assertEquals(decrypt(' Tah itse sits!', 3), 'This is a test!')
     Test.assertEquals(decrypt('This is a test!', 4), 'This is a test!')
     Test.assertEquals(decrypt('This is a test!', -1), 'This is a test!')
-    Test.assertEquals(decrypt('hskt svr neetn!Ti aai eyitrsig', 1), 'This kata is very interesting!')
+    Test.assertEquals(
+      decrypt('hskt svr neetn!Ti aai eyitrsig', 1),
+      'This kata is very interesting!',
+    )
   })
 })
 

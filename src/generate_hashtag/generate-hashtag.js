@@ -1,19 +1,19 @@
 Object.assign(String.prototype, {
-  safeHead (fallback = '') {
+  safeHead(fallback = '') {
     return this.head() || fallback
   },
-  head () {
+  head() {
     return this.at(0)
   },
-  tail () {
+  tail() {
     return this.slice(1)
-  }
+  },
 })
 
 const pipe =
   (fn, ...fns) =>
-    (...params) =>
-      fns.reduce((acc, curr) => curr(acc), fn(...params))
+  (...params) =>
+    fns.reduce((acc, curr) => curr(acc), fn(...params))
 
 const space = ' '
 
@@ -24,7 +24,8 @@ const containsOnlyWhitespaces = (str) => /^\s*$/.test(str)
 const parseNotIsEmpty = (str) =>
   str.length !== 0 && !containsOnlyWhitespaces(str) && str
 
-const parseSmallerThan140 = (str) => str && [...str].filter(notIsSpace).length < 140 && str
+const parseSmallerThan140 = (str) =>
+  str && [...str].filter(notIsSpace).length < 140 && str
 
 const capitalize = (str) => str.safeHead().toUpperCase() + str.tail()
 

@@ -1,5 +1,5 @@
 const Test = {
-  assertEquals: (curr, exp) => require('chai').expect(curr).to.equal(exp)
+  assertEquals: (curr, exp) => require('chai').expect(curr).to.equal(exp),
 }
 
 const shortenNumber = require('../../src/shorten_number/shortenNumber')

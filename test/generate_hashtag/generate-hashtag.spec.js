@@ -7,48 +7,48 @@ describe('Tests', () => {
     assert.strictEqual(
       generateHashtag(''),
       false,
-      'Expected an empty string to return false'
+      'Expected an empty string to return false',
     )
     assert.strictEqual(
       generateHashtag(' '.repeat(200)),
       false,
-      'Still an empty string'
+      'Still an empty string',
     )
     assert.strictEqual(
       generateHashtag('Do We have A Hashtag'),
       '#DoWeHaveAHashtag',
-      'Expected a Hashtag (#) at the beginning.'
+      'Expected a Hashtag (#) at the beginning.',
     )
     assert.strictEqual(
       generateHashtag('Codewars'),
       '#Codewars',
-      'Should handle a single word.'
+      'Should handle a single word.',
     )
     assert.strictEqual(
       generateHashtag('Codewars Is Nice'),
       '#CodewarsIsNice',
-      'Should remove spaces.'
+      'Should remove spaces.',
     )
     assert.strictEqual(
       generateHashtag('Codewars is nice'),
       '#CodewarsIsNice',
-      'Should capitalize first letters of words.'
+      'Should capitalize first letters of words.',
     )
     assert.strictEqual(
       generateHashtag('code' + ' '.repeat(140) + 'wars'),
-      '#CodeWars'
+      '#CodeWars',
     )
     assert.strictEqual(
       generateHashtag(
-        'Looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong Cat'
+        'Looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong Cat',
       ),
       false,
-      'Should return false if the final word is longer than 140 chars.'
+      'Should return false if the final word is longer than 140 chars.',
     )
     assert.strictEqual(
       generateHashtag('a'.repeat(139)),
       '#A' + 'a'.repeat(138),
-      'Should work'
+      'Should work',
     )
     assert.strictEqual(generateHashtag('a'.repeat(140)), false, 'Too long')
   })

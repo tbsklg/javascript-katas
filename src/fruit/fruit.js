@@ -1,10 +1,14 @@
-function fruit ([leftReel, middleReel, rightReel], [leftSpin, middleSpin, rightSpin]) {
+function fruit(
+  [leftReel, middleReel, rightReel],
+  [leftSpin, middleSpin, rightSpin],
+) {
   const left = leftReel[leftSpin]
   const middle = middleReel[middleSpin]
   const right = rightReel[rightSpin]
 
   const score = ([leftScore, middleScore, rightScore]) => {
-    if (leftScore === middleScore && middleScore === rightScore) return scoreOf[leftScore]
+    if (leftScore === middleScore && middleScore === rightScore)
+      return scoreOf[leftScore]
     if (leftScore === middleScore) {
       const currentScore = scoreOf[leftScore] / 10
       if (rightScore === 'Wild') return currentScore * 2
@@ -30,7 +34,7 @@ function fruit ([leftReel, middleReel, rightReel], [leftSpin, middleSpin, rightS
     Bar: 40,
     King: 30,
     Queen: 20,
-    Jack: 10
+    Jack: 10,
   }
 
   return score([left, middle, right].sort())

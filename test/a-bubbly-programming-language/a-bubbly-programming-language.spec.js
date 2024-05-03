@@ -8,7 +8,7 @@ const {
   sub,
   div,
   mul,
-  push
+  push,
 } = require('../../src/a_bubbly_programming_language/a-bubbly-programming-language')
 
 describe('Bubbly', () => {
@@ -16,7 +16,7 @@ describe('Bubbly', () => {
     assert.strictEqual(start(push)(5)(push)(3)(add)(end), 8)
     assert.strictEqual(
       start(push)(2)(push)(5)(div)(push)(3)(push)(8)(mul)(mul)(end),
-      48
+      48,
     )
     assert.strictEqual(start(push)(4)(push)(9)(div)(end), 2)
     assert.strictEqual(start(push)(5)(push)(8)(push)(1)(add)(add)(end), 14)

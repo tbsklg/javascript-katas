@@ -1,4 +1,4 @@
-function meeting (x, need) {
+function meeting(x, need) {
   if (need === 0) return 'Game On'
 
   const countChairs = (rooms, neededChairs) => {

@@ -1,6 +1,6 @@
-function cutFruits (fruits) {
+function cutFruits(fruits) {
   return fruits
-    .map(fruit => {
+    .map((fruit) => {
       if (isFruit(fruit)) return cut(fruit)
 
       return [fruit]
@@ -8,7 +8,7 @@ function cutFruits (fruits) {
     .reduce((acc, curr) => [...acc, ...curr])
 }
 
-function cut (fruit) {
+function cut(fruit) {
   const isOdd = fruit.length % 2 !== 0
   const half = fruit.length / 2
 
@@ -21,8 +21,8 @@ function cut (fruit) {
 
 const fruits = ['apple', 'pear', 'banana']
 
-function isFruit (f) {
-  return fruits.find(x => x === f)
+function isFruit(f) {
+  return fruits.find((x) => x === f)
 }
 
 module.exports = cutFruits

@@ -1,4 +1,4 @@
-function pascal (depth) {
+function pascal(depth) {
   if (depth === 1) return [[1]]
 
   const go = (n, acc) => {
@@ -10,11 +10,11 @@ function pascal (depth) {
   return go(depth - 1, [[1]])
 }
 
-const createLine = line => [1, ...zipWith(plus)(line, tailMay(line)), 1]
+const createLine = (line) => [1, ...zipWith(plus)(line, tailMay(line)), 1]
 
 const plus = (x, y) => x + y
 
-const zipWith = fn => (xs, ys) => {
+const zipWith = (fn) => (xs, ys) => {
   const go = (l, r) => {
     if (l.length === 0) return []
 
@@ -29,6 +29,6 @@ const zipWith = fn => (xs, ys) => {
   return go(xs, ys)
 }
 
-const tailMay = ([_, ...xs]) => xs === undefined ? [] : xs
+const tailMay = ([_, ...xs]) => (xs === undefined ? [] : xs)
 
 module.exports = pascal

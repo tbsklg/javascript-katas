@@ -2,9 +2,9 @@ const chai = require('chai')
 const expect = chai.expect
 
 const Test = {
-  assertDeepEquals (actual, expected) {
+  assertDeepEquals(actual, expected) {
     expect(actual).to.deep.equal(expected)
-  }
+  },
 }
 
 const parse = require('../../src/parse/parse')

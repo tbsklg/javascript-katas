@@ -1,4 +1,4 @@
-function problem (x) {
+function problem(x) {
   if (typeof x !== 'number') {
     return 'Error'
   }

@@ -1,4 +1,4 @@
-function changer (str) {
+function changer(str) {
   const alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
   const shift = (x) => {
@@ -14,16 +14,17 @@ function changer (str) {
 
   const unwords = (x) => x.join(' ')
 
-  const capitalizeIfVowel = (x) => isVowel(x) ? x.toUpperCase() : x
+  const capitalizeIfVowel = (x) => (isVowel(x) ? x.toUpperCase() : x)
 
   return unwords(
-    words(str)
-      .map(x => x.split('')
-        .map(x => x.toLowerCase())
-        .map(x => shift(x))
-        .map(x => capitalizeIfVowel(x))
-        .join('')
-      )
+    words(str).map((x) =>
+      x
+        .split('')
+        .map((x) => x.toLowerCase())
+        .map((x) => shift(x))
+        .map((x) => capitalizeIfVowel(x))
+        .join(''),
+    ),
   )
 }
 

@@ -2,7 +2,7 @@ const chai = require('chai')
 const assert = chai.assert
 
 const Test = {
-  assertEquals: assert.strictEqual
+  assertEquals: assert.strictEqual,
 }
 
 const findMissingLetter = require('../../src/missing_letter/findMissingLetter')

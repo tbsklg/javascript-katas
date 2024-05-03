@@ -1,7 +1,7 @@
-const findRoutes = routes => {
+const findRoutes = (routes) => {
   const starts = routes.map(([x, _]) => x)
   const destinations = routes.map(([_, x]) => x)
-  const destination = destinations.find(x => !starts.includes(x))
+  const destination = destinations.find((x) => !starts.includes(x))
 
   if (!destination) return ''
 
@@ -18,6 +18,6 @@ const findRoutes = routes => {
   return route(destination, flippedRoutes).reverse().join(', ')
 }
 
-const flip = xs => [...xs].map(([x, y]) => [y, x])
+const flip = (xs) => [...xs].map(([x, y]) => [y, x])
 
 module.exports = findRoutes

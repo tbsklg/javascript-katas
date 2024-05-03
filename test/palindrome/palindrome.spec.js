@@ -1,7 +1,7 @@
 const chai = require('chai')
 
 const Test = {
-  assertEquals: (actual, expected) => chai.assert.equal(actual, expected)
+  assertEquals: (actual, expected) => chai.assert.equal(actual, expected),
 }
 
 const palindrome = require('../../src/palindrome/palindrome')

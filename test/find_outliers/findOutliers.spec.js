@@ -2,7 +2,7 @@ const chai = require('chai')
 const assert = chai.assert
 
 const Test = {
-  assertEquals: (current, expected) => assert.equal(current, expected)
+  assertEquals: (current, expected) => assert.equal(current, expected),
 }
 
 const findOutlier = require('../../src/find_outlier/findOutlier')

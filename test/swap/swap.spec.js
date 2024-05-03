@@ -7,10 +7,16 @@ describe('Fixed tests', function () {
     assert.strictEqual(swap('Hello world!', 11), 'heLLO wORLd!')
   })
   it('testing for "the quick broWn fox leapt over the fence", 9', function () {
-    assert.strictEqual(swap('the quick broWn fox leapt over the fence', 9), 'The QUicK BrowN foX LeaPT ovER thE FenCE')
+    assert.strictEqual(
+      swap('the quick broWn fox leapt over the fence', 9),
+      'The QUicK BrowN foX LeaPT ovER thE FenCE',
+    )
   })
   it('testing for "eVerybody likes ice cReam", 85', function () {
-    assert.strictEqual(swap('eVerybody likes ice cReam', 85), 'EVErYbODy LiKeS IcE creAM')
+    assert.strictEqual(
+      swap('eVerybody likes ice cReam', 85),
+      'EVErYbODy LiKeS IcE creAM',
+    )
   })
   it('testing for "gOOd MOrniNg", 7864', function () {
     assert.strictEqual(swap('gOOd MOrniNg', 7864), 'GooD MorNIng')
@@ -20,7 +26,10 @@ describe('Fixed tests', function () {
   })
 
   it('edge cases n = 0', function () {
-    assert.strictEqual(swap('the lord of the rings', 0), 'the lord of the rings')
+    assert.strictEqual(
+      swap('the lord of the rings', 0),
+      'the lord of the rings',
+    )
   })
   it('edge cases s is empty', function () {
     assert.strictEqual(swap('', 11345), '')

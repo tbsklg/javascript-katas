@@ -2,7 +2,7 @@ const { assert } = require('chai')
 
 const solution = require('../../src/multiples/multiples')
 
-function test (n, expected) {
+function test(n, expected) {
   it(`n=${n}`, () => {
     const actual = solution(n)
     assert.strictEqual(actual, expected)

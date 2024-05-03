@@ -4,7 +4,7 @@ const expect = chai.expect
 const thirt = require('../../src/thirt/thirt')
 
 const Test = {
-  assertEquals: (actual, expected) => expect(actual).to.equal(expected)
+  assertEquals: (actual, expected) => expect(actual).to.equal(expected),
 }
 
 describe('thirt', function () {

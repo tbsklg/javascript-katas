@@ -29,6 +29,6 @@ const zipWith = (fn) => (xs, ys) => {
   return go(xs, ys)
 }
 
-const tailMay = ([_, ...xs]) => (xs === undefined ? [] : xs)
+const tailMay = ([, ...xs]) => (xs === undefined ? [] : xs)
 
 module.exports = pascal

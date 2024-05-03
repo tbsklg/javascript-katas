@@ -113,7 +113,7 @@ function validateSudoku(board) {
   )
 }
 
-const rotate = (rows, acc = []) => {
+const rotate = (rows) => {
   if (rows.length === 0) return []
 
   const transpose = ([e, ...es], [a, ...as]) => {

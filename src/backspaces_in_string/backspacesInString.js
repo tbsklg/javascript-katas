@@ -4,7 +4,7 @@ function cleanString(s) {
   return s
     .split('')
     .reduce((acc, curr) => {
-      if (acc === [] && curr === '#') return []
+      if (acc.length === 0 && curr === '#') return []
       if (curr === '#') return init(acc)
       return [...acc, curr]
     }, [])

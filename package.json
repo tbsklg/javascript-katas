@@ -5,7 +5,8 @@
   "scripts": {
     "prepare": "husky",
     "test": "mocha --recursive",
-    "test:watch": "mocha --watch --recursive"
+    "test:watch": "mocha --watch --recursive",
+    "lint-staged": "lint-staged"
   },
   "author": "",
   "license": "ISC",
@@ -18,5 +19,10 @@
     "mocha": "^10.0.0",
     "prettier": "3.2.5",
     "lint-staged": "^15.2.2"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write"
+    ]
   }
 }

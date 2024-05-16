@@ -7,6 +7,11 @@ function dashatize(num) {
   )
 }
 
+//return String(num)
+//    .replace(/([13579])/g, "-$1-")
+//    .replace(/--+/g, "-")
+//    .replace(/(^-|-$)/g, "")
+
 const trimWith = (x, xs) => {
   return dropWhile((y) => y === x, dropWhile((y) => y === x, [...xs]).reverse())
     .reverse()

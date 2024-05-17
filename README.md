@@ -4,12 +4,12 @@
 
 This repository contains my solutions to Katas hosted on [codewars.com](https://www.codewars.com/).
 
-# Run tests
+## Run tests
 ```bash
 npm test
 ```
 
-# Run tests in watch mode
+## Run tests in watch mode
 ```bash
 npm run test:watch
 ```

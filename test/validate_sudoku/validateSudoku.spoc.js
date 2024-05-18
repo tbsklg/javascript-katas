@@ -1,13 +1,13 @@
 // You can use `chai` for assertions.
-const chai = require('chai')
-const assert = chai.assert
+const chai = require('chai');
+const assert = chai.assert;
 
-chai.config.truncateThreshold = 0
+chai.config.truncateThreshold = 0;
 
 const {
   validateSudoku,
   rotate,
-} = require('../../src/validate_sudoku/validateSudoku')
+} = require('../../src/validate_sudoku/validateSudoku');
 
 describe('Tests', function () {
   const fixedBoards = [
@@ -263,54 +263,54 @@ describe('Tests', function () {
       ],
       false,
     ], // valid boxes and rows, repeats in cols
-  ]
+  ];
 
   it('Example tests', function () {
     function clone(board) {
-      return board.map((row) => [...row])
+      return board.map((row) => [...row]);
     }
 
     function stringify(board) {
       function strrow(row) {
-        return `${row[0]}${row[1]}${row[2]}|${row[3]}${row[4]}${row[5]}|${row[6]}${row[7]}${row[8]}`
+        return `${row[0]}${row[1]}${row[2]}|${row[3]}${row[4]}${row[5]}|${row[6]}${row[7]}${row[8]}`;
       }
 
-      const rows = board.map(strrow)
-      rows.splice(6, 0, '---+---+---')
-      rows.splice(3, 0, '---+---+---')
-      return rows.join('\n')
+      const rows = board.map(strrow);
+      rows.splice(6, 0, '---+---+---');
+      rows.splice(3, 0, '---+---+---');
+      return rows.join('\n');
     }
 
     for (const [board, expected] of fixedBoards) {
-      const input = clone(board)
-      const actual = validateSudoku(input)
+      const input = clone(board);
+      const actual = validateSudoku(input);
       assert.strictEqual(
         actual,
         expected,
         `Incorrect answer for board:\n\n${stringify(board)}\n`,
-      )
-      assert.deepEqual(input, board, 'Input board must not be modified')
+      );
+      assert.deepEqual(input, board, 'Input board must not be modified');
     }
-  })
-})
+  });
+});
 
 describe('it should rotate an array', () => {
   it('should rotate with only one row', () => {
-    const a = [[1, 2, 3, 4]]
+    const a = [[1, 2, 3, 4]];
 
-    assert.deepEqual(rotate(a), [[1], [2], [3], [4]])
-  })
+    assert.deepEqual(rotate(a), [[1], [2], [3], [4]]);
+  });
 
   it('should rotate with two rows', () => {
     const a = [
       [1, 2, 3],
       [4, 5, 6],
-    ]
+    ];
 
     assert.deepEqual(rotate(a), [
       [1, 4],
       [2, 5],
       [3, 6],
-    ])
-  })
-})
+    ]);
+  });
+});

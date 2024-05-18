@@ -2,27 +2,27 @@ function fruit(
   [leftReel, middleReel, rightReel],
   [leftSpin, middleSpin, rightSpin],
 ) {
-  const left = leftReel[leftSpin]
-  const middle = middleReel[middleSpin]
-  const right = rightReel[rightSpin]
+  const left = leftReel[leftSpin];
+  const middle = middleReel[middleSpin];
+  const right = rightReel[rightSpin];
 
   const score = ([leftScore, middleScore, rightScore]) => {
     if (leftScore === middleScore && middleScore === rightScore)
-      return scoreOf[leftScore]
+      return scoreOf[leftScore];
     if (leftScore === middleScore) {
-      const currentScore = scoreOf[leftScore] / 10
-      if (rightScore === 'Wild') return currentScore * 2
-      return currentScore
+      const currentScore = scoreOf[leftScore] / 10;
+      if (rightScore === 'Wild') return currentScore * 2;
+      return currentScore;
     }
 
     if (middleScore === rightScore) {
-      const currentScore = scoreOf[middleScore] / 10
-      if (leftScore === 'Wild') return currentScore * 2
-      return currentScore
+      const currentScore = scoreOf[middleScore] / 10;
+      if (leftScore === 'Wild') return currentScore * 2;
+      return currentScore;
     }
 
-    return 0
-  }
+    return 0;
+  };
 
   const scoreOf = {
     Wild: 100,
@@ -35,9 +35,9 @@ function fruit(
     King: 30,
     Queen: 20,
     Jack: 10,
-  }
+  };
 
-  return score([left, middle, right].sort())
+  return score([left, middle, right].sort());
 }
 
-module.exports = fruit
+module.exports = fruit;

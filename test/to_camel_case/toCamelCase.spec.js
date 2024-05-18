@@ -1,6 +1,6 @@
-const { assert } = require('chai')
+const { assert } = require('chai');
 
-const toCamelCase = require('../../src/to_camel_case/toCamelCase')
+const toCamelCase = require('../../src/to_camel_case/toCamelCase');
 
 describe('Tests', () => {
   it('test', () => {
@@ -9,16 +9,16 @@ describe('Tests', () => {
       toCamelCase('the_stealth_warrior'),
       'theStealthWarrior',
       "toCamelCase('the_stealth_warrior') did not return correct value",
-    )
+    );
     assert.strictEqual(
       toCamelCase('The-Stealth-Warrior'),
       'TheStealthWarrior',
       "toCamelCase('The-Stealth-Warrior') did not return correct value",
-    )
+    );
     assert.strictEqual(
       toCamelCase('A-B-C'),
       'ABC',
       "toCamelCase('A-B-C') did not return correct value",
-    )
-  })
-})
+    );
+  });
+});

@@ -1,9 +1,9 @@
-const chai = require('chai')
-const assert = chai.assert
+const chai = require('chai');
+const assert = chai.assert;
 
-chai.config.truncateThreshold = 0
+chai.config.truncateThreshold = 0;
 
-const spacey = require('../../src/spacey/space_y')
+const spacey = require('../../src/spacey/space_y');
 
 describe('Fixed Tests', () => {
   it('["kevin","has","no","space"]', () => {
@@ -12,8 +12,8 @@ describe('Fixed Tests', () => {
       'kevinhas',
       'kevinhasno',
       'kevinhasnospace',
-    ])
-  })
+    ]);
+  });
 
   it('["this","cheese","has","no","holes"]', () => {
     assert.deepEqual(spacey(['this', 'cheese', 'has', 'no', 'holes']), [
@@ -22,6 +22,6 @@ describe('Fixed Tests', () => {
       'thischeesehas',
       'thischeesehasno',
       'thischeesehasnoholes',
-    ])
-  })
-})
+    ]);
+  });
+});

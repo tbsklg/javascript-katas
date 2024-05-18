@@ -1,11 +1,11 @@
 function openOrSenior(data) {
   return data.map(([age, handicap]) => {
     if (age > 54 && handicap > 6) {
-      return 'Senior'
+      return 'Senior';
     }
 
-    return 'Open'
-  })
+    return 'Open';
+  });
 }
 
-module.exports = openOrSenior
+module.exports = openOrSenior;

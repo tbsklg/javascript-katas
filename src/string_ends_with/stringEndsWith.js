@@ -4,9 +4,9 @@ function solution(str, ending) {
       .split('')
       .slice(str.length - ending.length)
       .join('') === ending
-  )
+  );
 }
 
 // return str.endsWith(ending);
 
-module.exports = solution
+module.exports = solution;

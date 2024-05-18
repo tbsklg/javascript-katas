@@ -1,5 +1,5 @@
 function filterList(l) {
-  return l.filter((v) => Number.isInteger(v))
+  return l.filter((v) => Number.isInteger(v));
 }
 
-module.exports = filterList
+module.exports = filterList;

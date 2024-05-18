@@ -1,8 +1,8 @@
 const moveZeros = (arr) => {
-  const withoutZeros = arr.filter((x) => x !== 0)
-  const zeros = arr.filter((x) => x === 0)
+  const withoutZeros = arr.filter((x) => x !== 0);
+  const zeros = arr.filter((x) => x === 0);
 
-  return [...withoutZeros, ...zeros]
-}
+  return [...withoutZeros, ...zeros];
+};
 
-module.exports = moveZeros
+module.exports = moveZeros;

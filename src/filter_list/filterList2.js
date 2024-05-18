@@ -1,5 +1,5 @@
 function filterList2(l) {
-  return l.filter((element) => typeof element !== 'string')
+  return l.filter((element) => typeof element !== 'string');
 }
 
-module.exports = filterList2
+module.exports = filterList2;

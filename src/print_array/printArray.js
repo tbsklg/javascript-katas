@@ -1,5 +1,5 @@
 function printArray(array) {
-  return array.join(',')
+  return array.join(',');
 }
 
-module.exports = printArray
+module.exports = printArray;

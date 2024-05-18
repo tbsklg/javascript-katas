@@ -1,6 +1,6 @@
-const { assert } = require('chai')
+const { assert } = require('chai');
 
-const sortme = require('../../src/sort_me/sortMe')
+const sortme = require('../../src/sort_me/sortMe');
 
 describe('Basic tests', () => {
   it('Testing for fixed tests', () => {
@@ -9,10 +9,10 @@ describe('Basic tests', () => {
       'Hello',
       "I'm",
       'there',
-    ])
-    assert.deepEqual(sortme(['C', 'd', 'a', 'B']), ['a', 'B', 'C', 'd'])
-    assert.deepEqual(sortme(['CodeWars']), ['CodeWars'])
-    assert.deepEqual(sortme([]), [])
+    ]);
+    assert.deepEqual(sortme(['C', 'd', 'a', 'B']), ['a', 'B', 'C', 'd']);
+    assert.deepEqual(sortme(['CodeWars']), ['CodeWars']);
+    assert.deepEqual(sortme([]), []);
     assert.deepEqual(
       sortme([
         'Eye',
@@ -58,6 +58,6 @@ describe('Basic tests', () => {
         'Would',
         'young',
       ],
-    )
-  })
-})
+    );
+  });
+});

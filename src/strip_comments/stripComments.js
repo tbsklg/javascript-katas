@@ -1,5 +1,5 @@
 const solution = (text, markers) => {
-  const trimmed = text.trimEnd()
+  const trimmed = text.trimEnd();
 
   if (trimmed.includes('\n')) {
     return unlines(
@@ -8,21 +8,21 @@ const solution = (text, markers) => {
           .join('')
           .trimEnd(),
       ),
-    )
+    );
   }
 
   return takeWhile((c) => !markers.includes(c), trimmed)
     .join('')
-    .trimEnd()
-}
+    .trimEnd();
+};
 
-const lines = (xs) => xs.split('\n')
-const unlines = (xs) => xs.join('\n')
+const lines = (xs) => xs.split('\n');
+const unlines = (xs) => xs.join('\n');
 const takeWhile = (fn, data) => {
-  if (data.length === 0) return []
+  if (data.length === 0) return [];
 
-  const [x, ...xs] = data
-  return fn(x) ? [x, ...takeWhile(fn, xs)] : []
-}
+  const [x, ...xs] = data;
+  return fn(x) ? [x, ...takeWhile(fn, xs)] : [];
+};
 
-module.exports = solution
+module.exports = solution;

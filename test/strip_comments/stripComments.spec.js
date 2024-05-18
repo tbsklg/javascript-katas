@@ -1,14 +1,14 @@
-const { assert } = require('chai')
+const { assert } = require('chai');
 
-const solution = require('../../src/strip_comments/stripComments')
+const solution = require('../../src/strip_comments/stripComments');
 
 describe('Sample Tests', function () {
   function runTest(text, markers, expected) {
-    const title = `text = ${JSON.stringify(text)}, markers = ${JSON.stringify(markers)}`
-    const actual = solution(text, markers)
+    const title = `text = ${JSON.stringify(text)}, markers = ${JSON.stringify(markers)}`;
+    const actual = solution(text, markers);
     it(title, function () {
-      assert.strictEqual(actual, expected)
-    })
+      assert.strictEqual(actual, expected);
+    });
   }
 
   const tests = [
@@ -39,7 +39,9 @@ describe('Sample Tests', function () {
 
     ['aa + bb\ncc - dd\nee * ff', ['+', '-', '*'], 'aa\ncc\nee'],
     ['aa / bb\ncc ^ dd\nee $ ff', ['/', '^', '$'], 'aa\ncc\nee'],
-  ]
+  ];
 
-  tests.forEach(([text, markers, expected]) => runTest(text, markers, expected))
-})
+  tests.forEach(([text, markers, expected]) =>
+    runTest(text, markers, expected),
+  );
+});

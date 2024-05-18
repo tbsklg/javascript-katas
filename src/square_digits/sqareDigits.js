@@ -6,7 +6,7 @@ function squareDigits(num) {
       .map((x) => Number.parseInt(x))
       .map((x) => x * x)
       .join(''),
-  )
+  );
 }
 
-module.exports = squareDigits
+module.exports = squareDigits;

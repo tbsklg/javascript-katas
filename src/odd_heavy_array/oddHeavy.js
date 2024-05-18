@@ -1,6 +1,6 @@
 function isOddHeavy(n) {
-  const odds = n.filter((x) => x % 2 !== 0)
-  const evens = n.filter((x) => x % 2 === 0)
+  const odds = n.filter((x) => x % 2 !== 0);
+  const evens = n.filter((x) => x % 2 === 0);
 
   return (
     odds.length > 0 &&
@@ -8,7 +8,7 @@ function isOddHeavy(n) {
       (previous, current) => previous && evens.every((x) => x < current),
       true,
     )
-  )
+  );
 }
 
-module.exports = isOddHeavy
+module.exports = isOddHeavy;

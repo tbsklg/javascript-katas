@@ -5,9 +5,9 @@ function gooseFilter(birds) {
     'Toulouse',
     'Pilgrim',
     'Steinbacher',
-  ]
+  ];
 
-  return birds.filter((bird) => !geese.find((g) => g === bird))
+  return birds.filter((bird) => !geese.find((g) => g === bird));
 }
 
-module.exports = gooseFilter
+module.exports = gooseFilter;

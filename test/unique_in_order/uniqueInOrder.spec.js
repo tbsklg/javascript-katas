@@ -1,8 +1,8 @@
-const chai = require('chai')
-const assert = chai.assert
-chai.config.truncateThreshold = 0
+const chai = require('chai');
+const assert = chai.assert;
+chai.config.truncateThreshold = 0;
 
-const uniqueInOrder = require('../../src/unique_in_order/uniqueInOrder')
+const uniqueInOrder = require('../../src/unique_in_order/uniqueInOrder');
 
 describe('Tests', () => {
   it('test', () => {
@@ -13,6 +13,6 @@ describe('Tests', () => {
       'D',
       'A',
       'B',
-    ])
-  })
-})
+    ]);
+  });
+});

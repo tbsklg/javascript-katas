@@ -1,5 +1,5 @@
 function titleCase(title, minorWords) {
-  const [head, ...tail] = title.split(' ')
+  const [head, ...tail] = title.split(' ');
 
   return [
     capitalize(head),
@@ -10,15 +10,15 @@ function titleCase(title, minorWords) {
           .split(' ')
           .some((minorWord) => minorWord.toLowerCase() === word.toLowerCase())
       ) {
-        return capitalize(word)
+        return capitalize(word);
       }
-      return word.toLowerCase()
+      return word.toLowerCase();
     }),
-  ].join(' ')
+  ].join(' ');
 }
 
 function capitalize(word) {
-  return word.toLowerCase().replace(/\w/, (first) => first.toUpperCase())
+  return word.toLowerCase().replace(/\w/, (first) => first.toUpperCase());
 }
 
-module.exports = titleCase
+module.exports = titleCase;

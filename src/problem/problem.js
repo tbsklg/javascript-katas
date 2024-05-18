@@ -1,9 +1,9 @@
 function problem(x) {
   if (typeof x !== 'number') {
-    return 'Error'
+    return 'Error';
   }
 
-  return 50 * x + 6
+  return 50 * x + 6;
 }
 
-module.exports = problem
+module.exports = problem;

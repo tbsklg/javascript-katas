@@ -1,5 +1,5 @@
 function validateSudoku(board) {
-  const rotatedBoard = rotate(board)
+  const rotatedBoard = rotate(board);
 
   const boxes = [
     [
@@ -101,28 +101,28 @@ function validateSudoku(board) {
       board[8][7],
       board[8][8],
     ],
-  ]
+  ];
 
   const isValid = (arr) => {
-    const set = new Set(arr)
-    return set.size === 9 && !set.has(0)
-  }
+    const set = new Set(arr);
+    return set.size === 9 && !set.has(0);
+  };
 
   return (
     board.every(isValid) && rotatedBoard.every(isValid) && boxes.every(isValid)
-  )
+  );
 }
 
 const rotate = (rows) => {
-  if (rows.length === 0) return []
+  if (rows.length === 0) return [];
 
   const transpose = ([e, ...es], [a, ...as]) => {
-    if (e === undefined) return []
-    const transposedRow = [...(a || []), e]
-    return [transposedRow, ...transpose(es, as)]
-  }
+    if (e === undefined) return [];
+    const transposedRow = [...(a || []), e];
+    return [transposedRow, ...transpose(es, as)];
+  };
 
-  return rows.reduce((acc, curr) => [...transpose(curr, acc)], [])
-}
+  return rows.reduce((acc, curr) => [...transpose(curr, acc)], []);
+};
 
-module.exports = { validateSudoku, rotate }
+module.exports = { validateSudoku, rotate };

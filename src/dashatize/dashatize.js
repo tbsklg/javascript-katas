@@ -1,10 +1,10 @@
 function dashatize(num) {
-  if (num === 0) return '0'
+  if (num === 0) return '0';
 
   return trimWith(
     '-',
     digits(Math.abs(num)).map(dash).join('').replaceAll('--', '-'),
-  )
+  );
 }
 
 //return String(num)
@@ -15,29 +15,29 @@ function dashatize(num) {
 const trimWith = (x, xs) => {
   return dropWhile((y) => y === x, dropWhile((y) => y === x, [...xs]).reverse())
     .reverse()
-    .join('')
-}
+    .join('');
+};
 
 const dropWhile = (fn, xs) => {
-  if (xs.length === 0) return []
+  if (xs.length === 0) return [];
 
-  const [x, ...next] = xs
-  if (fn(x)) return dropWhile(fn, next)
+  const [x, ...next] = xs;
+  if (fn(x)) return dropWhile(fn, next);
 
-  return xs
-}
+  return xs;
+};
 
 const dash = (x) => {
-  if (even(x)) return x
-  return `-${x}-`
-}
+  if (even(x)) return x;
+  return `-${x}-`;
+};
 
 const digits = (x) => {
-  if (x === 0) return []
+  if (x === 0) return [];
 
-  return [...digits(Math.floor(x / 10)), x % 10]
-}
+  return [...digits(Math.floor(x / 10)), x % 10];
+};
 
-const even = (x) => x % 2 === 0
+const even = (x) => x % 2 === 0;
 
-module.exports = dashatize
+module.exports = dashatize;

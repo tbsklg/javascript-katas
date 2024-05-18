@@ -1,10 +1,10 @@
 const alphabetPosition = (text) => {
-  const alphabet = 'abcdefghijklmnopqrstuvwxyz'
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz';
 
   return [...text]
     .map((x) => alphabet.indexOf(x.toLowerCase()) + 1)
     .filter((x) => x !== 0)
-    .join(' ')
-}
+    .join(' ');
+};
 
-module.exports = alphabetPosition
+module.exports = alphabetPosition;

@@ -2,4 +2,4 @@ function sumConsecutives() {
   // your code
 }
 
-module.exports = sumConsecutives
+module.exports = sumConsecutives;

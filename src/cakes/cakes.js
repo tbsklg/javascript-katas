@@ -5,7 +5,7 @@ function cakes(recipe, available) {
         Math.min(acc, (available[ingredient] || 0) / recipe[ingredient]),
       Number.MAX_VALUE,
     ),
-  )
+  );
 }
 
-module.exports = cakes
+module.exports = cakes;

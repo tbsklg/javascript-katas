@@ -1,9 +1,9 @@
 function toCamelCase(str) {
-  const [head, ...tail] = str.split(/[_-]/)
+  const [head, ...tail] = str.split(/[_-]/);
   return [
     head,
     ...tail.map(([first, ...rest]) => [first.toUpperCase(), ...rest].join('')),
-  ].join('')
+  ].join('');
 }
 
-module.exports = toCamelCase
+module.exports = toCamelCase;

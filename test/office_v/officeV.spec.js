@@ -1,8 +1,8 @@
-const chai = require('chai')
-const assert = chai.assert
-chai.config.truncateThreshold = 0
+const chai = require('chai');
+const assert = chai.assert;
+chai.config.truncateThreshold = 0;
 
-const meeting = require('../../src/office_v/officeV.js')
+const meeting = require('../../src/office_v/officeV.js');
 
 describe('Example tests', () => {
   it('Tests', () => {
@@ -16,7 +16,7 @@ describe('Example tests', () => {
         4,
       ),
       [0, 1, 3],
-    )
+    );
     assert.deepEqual(
       meeting(
         [
@@ -30,7 +30,7 @@ describe('Example tests', () => {
         5,
       ),
       [0, 0, 1, 2, 2],
-    )
+    );
     assert.deepEqual(
       meeting(
         [
@@ -41,6 +41,6 @@ describe('Example tests', () => {
         0,
       ),
       'Game On',
-    )
-  })
-})
+    );
+  });
+});

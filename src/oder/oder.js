@@ -1,12 +1,12 @@
 function order(words) {
-  if (words === '') return words
+  if (words === '') return words;
 
   return words
     .split(' ')
     .sort((a, b) => {
-      return a.match(/\d/) - b.match(/\d/)
+      return a.match(/\d/) - b.match(/\d/);
     })
-    .join(' ')
+    .join(' ');
 }
 
-module.exports = order
+module.exports = order;

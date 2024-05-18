@@ -1,8 +1,8 @@
 const Test = {
   assertEquals: require('chai').assert.equal,
-}
+};
 
-const landPerimeter = require('../../src/land_perimeter/landPerimeter')
+const landPerimeter = require('../../src/land_perimeter/landPerimeter');
 
 describe('Testing', function () {
   it('Basic testing', () => {
@@ -20,7 +20,7 @@ describe('Testing', function () {
         'OXOOXX',
       ]),
       'Total land perimeter: 60',
-    )
+    );
     Test.assertEquals(
       landPerimeter([
         'OXOOO',
@@ -36,7 +36,7 @@ describe('Testing', function () {
         'OOOXO',
       ]),
       'Total land perimeter: 52',
-    )
+    );
     Test.assertEquals(
       landPerimeter([
         'XXXXXOOO',
@@ -46,7 +46,7 @@ describe('Testing', function () {
         'OXOXXOOX',
       ]),
       'Total land perimeter: 40',
-    )
+    );
     Test.assertEquals(
       landPerimeter([
         'XOOOXOO',
@@ -58,7 +58,7 @@ describe('Testing', function () {
         'XXXXOXO',
       ]),
       'Total land perimeter: 54',
-    )
+    );
     Test.assertEquals(
       landPerimeter([
         'OOOOXO',
@@ -70,6 +70,6 @@ describe('Testing', function () {
         'OOXXOO',
       ]),
       'Total land perimeter: 40',
-    )
-  })
-})
+    );
+  });
+});

@@ -1,8 +1,8 @@
-const chai = require('chai')
-const assert = chai.assert
-chai.config.truncateThreshold = 0
+const chai = require('chai');
+const assert = chai.assert;
+chai.config.truncateThreshold = 0;
 
-const openOrSenior = require('../../src/open_or_senior/openOrSenior')
+const openOrSenior = require('../../src/open_or_senior/openOrSenior');
 
 describe('Basic tests', () => {
   it('Fixed tests', () => {
@@ -14,7 +14,7 @@ describe('Basic tests', () => {
         [104, 20],
       ]),
       ['Open', 'Senior', 'Open', 'Senior'],
-    )
+    );
     assert.deepEqual(
       openOrSenior([
         [3, 12],
@@ -23,7 +23,7 @@ describe('Basic tests', () => {
         [53, 23],
       ]),
       ['Open', 'Open', 'Open', 'Open'],
-    )
+    );
     assert.deepEqual(
       openOrSenior([
         [59, 12],
@@ -32,6 +32,6 @@ describe('Basic tests', () => {
         [12, 12],
       ]),
       ['Senior', 'Open', 'Open', 'Open'],
-    )
-  })
-})
+    );
+  });
+});

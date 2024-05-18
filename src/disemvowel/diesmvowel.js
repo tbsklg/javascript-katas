@@ -2,11 +2,11 @@ function disemvowel(str) {
   return str
     .split('')
     .filter((c) => !vowels.includes(c))
-    .join('')
+    .join('');
 }
 
-const vowels = 'aeiouAEIOU'
+const vowels = 'aeiouAEIOU';
 
-module.exports = disemvowel
+module.exports = disemvowel;
 
 // return str.replace(/[aeiou]/gi, '');

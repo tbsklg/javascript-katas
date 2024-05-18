@@ -1,20 +1,20 @@
 function changer(str) {
-  const alphabet = 'abcdefghijklmnopqrstuvwxyz'
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz';
 
   const shift = (x) => {
-    if (alphabet.indexOf(x) === -1) return x
+    if (alphabet.indexOf(x) === -1) return x;
 
-    if (x === 'z') return 'a'
-    return alphabet[alphabet.indexOf(x) + 1]
-  }
+    if (x === 'z') return 'a';
+    return alphabet[alphabet.indexOf(x) + 1];
+  };
 
-  const isVowel = (x) => 'aeiou'.indexOf(x) !== -1
+  const isVowel = (x) => 'aeiou'.indexOf(x) !== -1;
 
-  const words = (x) => x.split(' ')
+  const words = (x) => x.split(' ');
 
-  const unwords = (x) => x.join(' ')
+  const unwords = (x) => x.join(' ');
 
-  const capitalizeIfVowel = (x) => (isVowel(x) ? x.toUpperCase() : x)
+  const capitalizeIfVowel = (x) => (isVowel(x) ? x.toUpperCase() : x);
 
   return unwords(
     words(str).map((x) =>
@@ -25,7 +25,7 @@ function changer(str) {
         .map((x) => capitalizeIfVowel(x))
         .join(''),
     ),
-  )
+  );
 }
 
-module.exports = changer
+module.exports = changer;

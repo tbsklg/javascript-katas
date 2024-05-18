@@ -4,7 +4,7 @@ function findOdd(A) {
     occurrences: A.filter((y) => y === x).length,
   }))
     .filter(({ occurrences }) => occurrences % 2 !== 0)
-    .map(({ number }) => number)[0]
+    .map(({ number }) => number)[0];
 }
 
-module.exports = findOdd
+module.exports = findOdd;

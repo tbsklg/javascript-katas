@@ -1,21 +1,21 @@
-const { strictEqual } = require('chai').assert
-const findTheBall = require('../../src/find_the_ball/findTheBall')
+const { strictEqual } = require('chai').assert;
+const findTheBall = require('../../src/find_the_ball/findTheBall');
 
 function doTest(start, moves, expected) {
-  const log = `for start = ${start} and moves ${JSON.stringify(moves)}\n`
-  const actual = findTheBall(start, moves)
-  strictEqual(actual, expected, log)
+  const log = `for start = ${start} and moves ${JSON.stringify(moves)}\n`;
+  const actual = findTheBall(start, moves);
+  strictEqual(actual, expected, log);
 }
 
 describe('sample tests', function () {
   it('An empty swap does nothing', function () {
-    doTest(5, [], 5)
-  })
+    doTest(5, [], 5);
+  });
 
   it('Testing with 2 cups', function () {
-    doTest(0, [[0, 1]], 1)
-    doTest(1, [[0, 1]], 0)
-  })
+    doTest(0, [[0, 1]], 1);
+    doTest(1, [[0, 1]], 0);
+  });
 
   it('Testing with 3 cups', function () {
     doTest(
@@ -26,7 +26,7 @@ describe('sample tests', function () {
         [0, 1],
       ],
       2,
-    )
+    );
     doTest(
       0,
       [
@@ -40,7 +40,7 @@ describe('sample tests', function () {
         [0, 2],
       ],
       1,
-    )
+    );
     doTest(
       0,
       [
@@ -48,7 +48,7 @@ describe('sample tests', function () {
         [1, 0],
       ],
       2,
-    )
+    );
     doTest(
       1,
       [
@@ -56,8 +56,8 @@ describe('sample tests', function () {
         [1, 0],
       ],
       0,
-    )
-  })
+    );
+  });
 
   it('Testing with 10 cups', function () {
     doTest(
@@ -71,7 +71,7 @@ describe('sample tests', function () {
         [4, 5],
       ],
       2,
-    )
+    );
     doTest(
       1,
       [
@@ -83,7 +83,7 @@ describe('sample tests', function () {
         [4, 5],
       ],
       1,
-    )
+    );
     doTest(
       2,
       [
@@ -95,7 +95,7 @@ describe('sample tests', function () {
         [4, 5],
       ],
       8,
-    )
+    );
     doTest(
       3,
       [
@@ -107,7 +107,7 @@ describe('sample tests', function () {
         [4, 5],
       ],
       9,
-    )
+    );
     doTest(
       4,
       [
@@ -119,7 +119,7 @@ describe('sample tests', function () {
         [4, 5],
       ],
       5,
-    )
+    );
     doTest(
       5,
       [
@@ -131,7 +131,7 @@ describe('sample tests', function () {
         [4, 5],
       ],
       4,
-    )
+    );
     doTest(
       6,
       [
@@ -143,6 +143,6 @@ describe('sample tests', function () {
         [4, 5],
       ],
       6,
-    )
-  })
-})
+    );
+  });
+});

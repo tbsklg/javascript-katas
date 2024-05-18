@@ -1,13 +1,13 @@
-const chai = require('chai')
-const expect = chai.expect
+const chai = require('chai');
+const expect = chai.expect;
 
 const Test = {
   assertEquals(actual, expected) {
-    expect(actual).to.equal(expected)
+    expect(actual).to.equal(expected);
   },
-}
+};
 
-const fruit = require('../../src/fruit/fruit')
+const fruit = require('../../src/fruit/fruit');
 
 describe('Fruit Machine', () => {
   it('should return 100', () => {
@@ -22,14 +22,14 @@ describe('Fruit Machine', () => {
       'King',
       'Queen',
       'Jack',
-    ]
-    const spin = [0, 0, 0]
+    ];
+    const spin = [0, 0, 0];
     Test.assertEquals(
       fruit([reel, reel, reel], spin),
       100,
       "Should return: '100'",
-    )
-  })
+    );
+  });
 
   it('should reutrn 0', () => {
     const reel1 = [
@@ -43,7 +43,7 @@ describe('Fruit Machine', () => {
       'King',
       'Queen',
       'Jack',
-    ]
+    ];
     const reel2 = [
       'Bar',
       'Wild',
@@ -55,7 +55,7 @@ describe('Fruit Machine', () => {
       'Jack',
       'Star',
       'Shell',
-    ]
+    ];
     const reel3 = [
       'Bell',
       'King',
@@ -67,14 +67,14 @@ describe('Fruit Machine', () => {
       'Cherry',
       'Queen',
       'Star',
-    ]
-    const spin = [5, 4, 3]
+    ];
+    const spin = [5, 4, 3];
     Test.assertEquals(
       fruit([reel1, reel2, reel3], spin),
       0,
       "Should return: '0'",
-    )
-  })
+    );
+  });
 
   it('should return 3', () => {
     const reel1 = [
@@ -88,7 +88,7 @@ describe('Fruit Machine', () => {
       'Shell',
       'Bell',
       'Wild',
-    ]
+    ];
     const reel2 = [
       'Bell',
       'Seven',
@@ -100,7 +100,7 @@ describe('Fruit Machine', () => {
       'Wild',
       'Cherry',
       'King',
-    ]
+    ];
     const reel3 = [
       'Wild',
       'King',
@@ -112,14 +112,14 @@ describe('Fruit Machine', () => {
       'Cherry',
       'Jack',
       'Bell',
-    ]
-    const spin = [0, 0, 1]
+    ];
+    const spin = [0, 0, 1];
     Test.assertEquals(
       fruit([reel1, reel2, reel3], spin),
       3,
       "Should return: '3'",
-    )
-  })
+    );
+  });
 
   it('should return 6', () => {
     const reel1 = [
@@ -133,7 +133,7 @@ describe('Fruit Machine', () => {
       'Cherry',
       'Shell',
       'Bar',
-    ]
+    ];
     const reel2 = [
       'Star',
       'Bar',
@@ -145,7 +145,7 @@ describe('Fruit Machine', () => {
       'Bell',
       'Cherry',
       'Shell',
-    ]
+    ];
     const reel3 = [
       'King',
       'Bell',
@@ -157,12 +157,12 @@ describe('Fruit Machine', () => {
       'Bar',
       'Wild',
       'Seven',
-    ]
-    const spin = [0, 5, 0]
+    ];
+    const spin = [0, 5, 0];
     Test.assertEquals(
       fruit([reel1, reel2, reel3], spin),
       6,
       "Should return: '6'",
-    )
-  })
-})
+    );
+  });
+});

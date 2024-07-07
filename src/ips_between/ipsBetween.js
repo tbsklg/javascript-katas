@@ -1,8 +1,8 @@
 function ipsBetween(start, end) {
-  return as32Bit(end) - as32Bit(start);
+  return ipTo32Bit(end) - ipTo32Bit(start);
 }
 
-const as32Bit = (ip) => {
+const ipTo32Bit = (ip) => {
   return ip.split('.').reduce((acc, val) => acc * 256 + parseInt(val), 0);
 };
 
